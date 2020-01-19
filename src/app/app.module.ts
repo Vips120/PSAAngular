@@ -6,14 +6,20 @@ import { CourseComponent } from "./course.component";
 import { Course } from "./course";
 import { Custom } from "./styleandclass";
 import { ParentComponent } from "./parent.component";
-import { ChildComponent} from "./child.compoennt";
+import { ChildComponent } from "./child.compoennt";
+import { Countlike } from "./count.like.component";
+import { Likecomponent} from "./like.component";
+import { GenderComponent } from './gender.component';
 @NgModule({
   declarations: [
     AppComponent,
     CourseComponent,
     Custom,
     ParentComponent,
-    ChildComponent
+    ChildComponent,
+    Countlike,
+    Likecomponent,
+    GenderComponent
   ],
   imports: [
     BrowserModule
