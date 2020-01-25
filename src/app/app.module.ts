@@ -10,6 +10,11 @@ import { ChildComponent } from "./child.compoennt";
 import { Countlike } from "./count.like.component";
 import { Likecomponent} from "./like.component";
 import { GenderComponent } from './gender.component';
+import { Userscomponent } from './user.component';
+import { StoreUserComponent } from './store.user.component';
+import { ProductComponent } from './product.component';
+import { StudentComponent } from './student.component';
+import { StudentPipe } from './student.pipe';
 @NgModule({
   declarations: [
     AppComponent,
@@ -19,7 +24,12 @@ import { GenderComponent } from './gender.component';
     ChildComponent,
     Countlike,
     Likecomponent,
-    GenderComponent
+    GenderComponent,
+    Userscomponent,
+    StoreUserComponent,
+    ProductComponent,
+    StudentComponent,
+    StudentPipe
   ],
   imports: [
     BrowserModule
