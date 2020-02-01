@@ -1,0 +1,54 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-8">
+            <form #F="ngForm" (ngSubmit)="Save(F.value)">
+                <div class="form-group">
+                    <input type="text" 
+                     name="username"
+                     required
+                     minlength="6"
+                    placeholder="enter username" class="form-control"
+                      [(ngModel)]="Model.username"
+                      #username="ngModel"
+                    >
+                    <div *ngIf="username.errors && username.touched">
+                        {{username.errors | json}}
+                           <div *ngIf="username.errors.required" class="alert alert-danger">username must be required*</div>
+                           <div *ngIf="username.errors.minlength" class="alert alert-danger">username must be a {{username.errors.minlength.requiredLength}} characters*</div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <input type="email"
+                     name="email"
+                     required
+                    placeholder="enter email" class="form-control"
+                     [(ngModel)]="Model.email"
+                     #email = "ngModel"
+                    >
+                    <div *ngIf="email.errors && email.touched">
+                        <div *ngIf="email.errors.required" class="alert alert-danger">
+                            email is required*
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <input type="password" 
+                     name="password"
+                     required
+                    placeholder="enter password" class="form-control"
+                     [(ngModel)]="Model.password"
+                     #password="ngModel"
+                    >
+                    <div *ngIf="password.errors && password.touched">
+                        <div *ngIf="password.errors.required" class="alert alert-danger">
+                            password is required*
+                        </div>
+                    </div>
+                </div>
+                <button type="submit" 
+                 [disabled]="!F.valid"
+                class="btn btn-outline-danger">Submit</button>
+            </form>
+        </div>
+    </div>
+</div>

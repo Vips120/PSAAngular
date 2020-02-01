@@ -15,6 +15,11 @@ import { StoreUserComponent } from './store.user.component';
 import { ProductComponent } from './product.component';
 import { StudentComponent } from './student.component';
 import { StudentPipe } from './student.pipe';
+import { ProductDetailsComponent } from './product.details.compoent';
+import { Details } from './details.pipe';
+import { FormsModule } from "@angular/forms";
+import { Imagepipe } from './image.pipe';
+import { CustomerTComponent } from './customer-t/customer-t.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -29,10 +34,15 @@ import { StudentPipe } from './student.pipe';
     StoreUserComponent,
     ProductComponent,
     StudentComponent,
-    StudentPipe
+    StudentPipe,
+    ProductDetailsComponent,
+    Details,
+    Imagepipe,
+    CustomerTComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule
   ],
   providers: [Course],
   bootstrap: [AppComponent]
