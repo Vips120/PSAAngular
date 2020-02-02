@@ -17,9 +17,10 @@ import { StudentComponent } from './student.component';
 import { StudentPipe } from './student.pipe';
 import { ProductDetailsComponent } from './product.details.compoent';
 import { Details } from './details.pipe';
-import { FormsModule } from "@angular/forms";
+import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { Imagepipe } from './image.pipe';
 import { CustomerTComponent } from './customer-t/customer-t.component';
+import { ReactiveformComponent } from './reactiveform/reactiveform.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -38,11 +39,13 @@ import { CustomerTComponent } from './customer-t/customer-t.component';
     ProductDetailsComponent,
     Details,
     Imagepipe,
-    CustomerTComponent
+    CustomerTComponent,
+    ReactiveformComponent
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [Course],
   bootstrap: [AppComponent]

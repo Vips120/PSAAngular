@@ -1,0 +1,89 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-8">
+            <form [formGroup]="userForm" (ngSubmit)="Save(userForm.value)">
+                   <div class="form-group">
+                       <input type="text" class="form-control" placeholder="enter firstname"
+                       formControlName="firstname"
+                       [class.is-valid]="userForm.controls.firstname.valid"
+                       [class.is-invalid]="!userForm.controls.firstname.valid && submitted"
+                       >
+                       <div class="alert alert-danger"
+                        *ngIf="userForm.controls.firstname.hasError('required') && submitted"
+                       >
+                          username must be required*
+                       </div>
+                       <div class="alert alert-danger"
+                       *ngIf="userForm.controls.firstname.hasError('minlength') && submitted"
+                      >
+                         username must be 5 characters*
+                      </div>
+                   </div>
+                   <div class="form-group">
+                    <input type="text" class="form-control" placeholder="enter lastname"
+                    formControlName="lastname"
+                    [class.is-valid]="userForm.controls.lastname.valid"
+                    [class.is-invalid]="!userForm.controls.lastname.valid && submitted"
+                    >
+                    <div class="alert alert-danger"
+                    *ngIf="userForm.controls.lastname.hasError('required') && submitted"
+                   >
+                      lastname must be required*
+                   </div>
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="enter address"
+                    formControlName="address"
+                    [class.is-valid]="userForm.controls.address.valid"
+                    [class.is-invalid]="!userForm.controls.address.valid && submitted"
+                    >
+                    <div class="alert alert-danger"
+                    *ngIf="userForm.controls.address.hasError('required') && submitted"
+                   >
+                      address must be required*
+                   </div>
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="enter mobile no"
+                    formControlName="mobile"
+                    [class.is-valid]="userForm.controls.mobile.valid"
+                    [class.is-invalid]="!userForm.controls.mobile.valid && submitted"
+                    >
+                    <div class="alert alert-danger"
+                    *ngIf="userForm.controls.mobile.hasError('required') && submitted"
+                   >
+                      mobile must be required*
+                   </div>
+                </div>
+                <div formGroupName="UserLogin">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="enter firstname"
+                        formControlName="UserId"
+                        [class.is-valid]="userForm.controls.UserLogin.controls.UserId.valid"
+                        [class.is-invalid]="!userForm.controls.UserLogin.controls.UserId.valid && submitted"
+                        >
+                        <div class="alert alert-danger"
+                        *ngIf="userForm.controls.UserLogin.controls.UserId.hasError('required') && submitted"
+                       >
+                          userid must be required*
+                       </div>
+                    </div>
+                    <div class="form-group">
+                        <input type="password" class="form-control" placeholder="enter password"
+                        formControlName="Password"
+                        [class.is-valid]="userForm.controls.UserLogin.controls.Password.valid"
+                        [class.is-invalid]="!userForm.controls.UserLogin.controls.Password.valid && submitted"
+                        >
+                        <div class="alert alert-danger"
+                        *ngIf="userForm.controls.UserLogin.controls.Password.hasError('required') && submitted"
+                       >
+                          password must be required*
+                       </div>
+                    </div>
+                </div>
+            
+                <button type="submit" class="btn btn-outline-danger">Submit</button>
+            </form>
+        </div>
+    </div>
+</div>
