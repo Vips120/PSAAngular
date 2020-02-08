@@ -12,7 +12,7 @@ import { Likecomponent} from "./like.component";
 import { GenderComponent } from './gender.component';
 import { Userscomponent } from './user.component';
 import { StoreUserComponent } from './store.user.component';
-import { ProductComponent } from './product.component';
+// import { ProductComponent } from './product.component';
 import { StudentComponent } from './student.component';
 import { StudentPipe } from './student.pipe';
 import { ProductDetailsComponent } from './product.details.compoent';
@@ -21,6 +21,15 @@ import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { Imagepipe } from './image.pipe';
 import { CustomerTComponent } from './customer-t/customer-t.component';
 import { ReactiveformComponent } from './reactiveform/reactiveform.component';
+import { NavbarComponent } from './navbar/navbar.component';
+import { HomeComponent } from './home/home.component';
+import { AboutComponent } from './about/about.component';
+import { RouterModule } from "@angular/router";
+import { routes } from "./apps.routes";
+import { About1Component } from './about1/about1.component';
+import { About2Component } from './about2/about2.component';
+import { About3Component } from './about3/about3.component';
+import { ProductComponent } from "./product/product.component";
 @NgModule({
   declarations: [
     AppComponent,
@@ -33,19 +42,27 @@ import { ReactiveformComponent } from './reactiveform/reactiveform.component';
     GenderComponent,
     Userscomponent,
     StoreUserComponent,
-    ProductComponent,
+    // ProductComponent,
     StudentComponent,
     StudentPipe,
     ProductDetailsComponent,
     Details,
     Imagepipe,
     CustomerTComponent,
-    ReactiveformComponent
+    ReactiveformComponent,
+    NavbarComponent,
+    HomeComponent,
+    AboutComponent,
+    About1Component,
+    About2Component,
+    About3Component,
+    ProductComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    RouterModule.forRoot(routes)
   ],
   providers: [Course],
   bootstrap: [AppComponent]

@@ -1,0 +1,31 @@
+<p>about works!</p>
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <ul *ngFor="let info of InfoLink">
+                <li class="nav-link" style="float:left">
+                    <a routerLink="{{info.name}}">{{info.name}}</a>
+                </li>   
+               </ul>
+        </div>
+
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <ul *ngFor="let service of productService">
+                <li class="nav-link" style="float:left">
+                    <a routerLink="/productdetails/{{service.id}}">{{service.name}}</a>
+                </li>   
+               </ul>
+        </div>
+
+    </div>
+   
+    <div class="row">
+        <div class="col-md-12">
+            <router-outlet></router-outlet>
+        </div>
+    </div>
+</div>
