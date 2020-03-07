@@ -5,14 +5,17 @@ import { About1Component } from './about1/about1.component';
 import { About2Component } from './about2/about2.component';
 import { About3Component } from './about3/about3.component';
 import { ProductComponent } from './product/product.component';
+import { AuthGuard } from './authguard/auth';
 export const routes: Routes = [
     {
         path: "",
-        component: HomeComponent
+        component: HomeComponent,
+        canActivate: [AuthGuard]
     },
     {
     path: "home",
-    component: HomeComponent
+        component: HomeComponent,
+    canActivate: [AuthGuard]
 },
 {
     path: "about",
@@ -34,5 +37,9 @@ export const routes: Routes = [
     {
         path: "productdetails/:id",
         component: ProductComponent
-}
+    },
+    {
+        path: "contact",
+        loadChildren:"./contact/contact.module#ContactModule"
+    }
 ];

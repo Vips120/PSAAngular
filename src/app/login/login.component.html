@@ -1,0 +1,43 @@
+<div class="login">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <form [formGroup]="userLogin" (ngSubmit)="Save(userLogin.value)">
+                    <p class="h4 text-center mb-4">Login</p>
+                    <div formGroupName="UserLogin">
+                        <div class="md-form">
+                            <i class="fa fa-exclamation-triangle prefix grey-text"></i>
+                            <label for="materialFormRegisterConfirmEx">UserName</label>
+                            <input type="text" placeholder="enter your username"
+                            class="form-control"
+                            formControlName="UserName"
+                            [class.is-valid]="userLogin.controls.UserLogin.controls.UserName.valid && submitted"
+                            [class.is-invalid]="!userLogin.controls.UserLogin.controls.UserName.valid && submitted"
+                            >
+                
+                         </div>
+                         <div class="md-form">
+                           <i class="fa fa-lock prefix grey-text"></i>
+                           <label for="materialFormRegisterPasswordEx">Your password</label>
+                           <input type="password" 
+                            placeholder="enter your password"
+                           class="form-control"
+                           formControlName="Password"
+                           [class.is-valid]="userLogin.controls.UserLogin.controls.Password.valid && submitted"
+                           [class.is-invalid]="!userLogin.controls.UserLogin.controls.Password.valid && submitted"
+                           >
+                         </div>
+                    </div>
+                  
+                    <div style="margin:10px">
+                        <button type="submit" class="btn btn-danger btn-md">
+                            Submit
+                        </button>
+                    </div>
+                      
+                 </form> 
+
+            </div>
+        </div>
+    </div>
+</div>
