@@ -11,8 +11,8 @@
                             <input type="text" placeholder="enter your username"
                             class="form-control"
                             formControlName="UserName"
-                            [class.is-valid]="userLogin.controls.UserLogin.controls.UserName.valid && submitted"
-                            [class.is-invalid]="!userLogin.controls.UserLogin.controls.UserName.valid && submitted"
+                            [class.is-valid]="userLogin.get('UserLogin').get('UserName').valid && submitted"
+                            [class.is-invalid]="!userLogin.get('UserLogin').get('UserName').valid && submitted"
                             >
                 
                          </div>
@@ -23,8 +23,8 @@
                             placeholder="enter your password"
                            class="form-control"
                            formControlName="Password"
-                           [class.is-valid]="userLogin.controls.UserLogin.controls.Password.valid && submitted"
-                           [class.is-invalid]="!userLogin.controls.UserLogin.controls.Password.valid && submitted"
+                           [class.is-valid]="userLogin.get('UserLogin').get('Password').valid && submitted"
+                           [class.is-invalid]="!userLogin.get('UserLogin').get('Password').valid && submitted"
                            >
                          </div>
                     </div>

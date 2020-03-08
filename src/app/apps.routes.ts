@@ -9,8 +9,7 @@ import { AuthGuard } from './authguard/auth';
 export const routes: Routes = [
     {
         path: "",
-        component: HomeComponent,
-        canActivate: [AuthGuard]
+        loadChildren:"./contact/contact.module#ContactModule"
     },
     {
     path: "home",

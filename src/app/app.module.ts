@@ -31,6 +31,7 @@ import { About2Component } from './about2/about2.component';
 import { About3Component } from './about3/about3.component';
 import { ProductComponent } from "./product/product.component";
 import {HttpClientModule } from "@angular/common/http";
+import { ProductComponent1 } from './product.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -43,7 +44,6 @@ import {HttpClientModule } from "@angular/common/http";
     GenderComponent,
     Userscomponent,
     StoreUserComponent,
-    // ProductComponent,
     StudentComponent,
     StudentPipe,
     ProductDetailsComponent,
@@ -57,7 +57,8 @@ import {HttpClientModule } from "@angular/common/http";
     About1Component,
     About2Component,
     About3Component,
-    ProductComponent
+    ProductComponent,
+    ProductComponent1
   ],
   imports: [
     BrowserModule,

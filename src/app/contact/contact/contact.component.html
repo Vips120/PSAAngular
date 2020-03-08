@@ -14,8 +14,8 @@
                <input type="text" class="form-control"
                 placeholder="enter your first name"
                 formControlName="FirstName"
-                [class.is-valid]="userRegister.controls.FirstName.valid && submitted"
-                [class.is-invalid]="!userRegister.controls.FirstName.valid && submitted"
+                [class.is-valid]="userRegister.get('FirstName').valid && submitted"
+                [class.is-invalid]="!userRegister.get('FirstName').valid && submitted"
                 >
             
             </div>
@@ -25,8 +25,8 @@
                 <input type="text" class="form-control"
                  placeholder="enter your last name"
                  formControlName="LastName"
-                 [class.is-valid]="userRegister.controls.LastName.valid && submitted"
-                 [class.is-invalid]="!userRegister.controls.LastName.valid && submitted"
+                 [class.is-valid]="userRegister.get('LastName').valid && submitted"
+                 [class.is-invalid]="!userRegister.get('LastName').valid && submitted"
                  >
              
              </div>
@@ -37,8 +37,8 @@
                 <input type="text" class="form-control"
                  placeholder="enter your mobile number"
                  formControlName="MobileNo"
-                 [class.is-valid]="userRegister.controls.MobileNo.valid && submitted"
-                 [class.is-invalid]="!userRegister.controls.MobileNo.valid && submitted"
+                 [class.is-valid]="userRegister.get('MobileNo').valid && submitted"
+                 [class.is-invalid]="!userRegister.get('MobileNo').valid && submitted"
                  >
              
              </div>
@@ -50,8 +50,8 @@
                 placeholder="enter your email id"
                class="form-control"
                formControlName="EmailId"
-               [class.is-valid]="userRegister.controls.EmailId.valid && submitted"
-               [class.is-invalid]="!userRegister.controls.EmailId.valid && submitted"
+               [class.is-valid]="userRegister.get('EmailId').valid && submitted"
+               [class.is-invalid]="!userRegister.get('EmailId').valid && submitted"
                >
             
             </div>
@@ -62,8 +62,8 @@
                     <input type="text" placeholder="enter your username"
                     class="form-control"
                     formControlName="UserName"
-                    [class.is-valid]="userRegister.controls.UserLogin.controls.UserName.valid && submitted"
-                    [class.is-invalid]="!userRegister.controls.UserLogin.controls.UserName.valid && submitted"
+                    [class.is-valid]="userRegister.get('UserLogin').get('UserName').valid && submitted"
+                    [class.is-invalid]="!userRegister.get('UserLogin').get('UserName').valid && submitted"
                     >
         
                  </div>
@@ -74,8 +74,8 @@
                     placeholder="enter your password"
                    class="form-control"
                    formControlName="Password"
-                   [class.is-valid]="userRegister.controls.UserLogin.controls.Password.valid && submitted"
-                   [class.is-invalid]="!userRegister.controls.UserLogin.controls.Password.valid && submitted"
+                   [class.is-valid]="userRegister.get('UserLogin').get('Password').valid && submitted"
+                   [class.is-invalid]="!userRegister.get('UserLogin').get('Password').valid && submitted"
                    >
                  </div>
             </div>

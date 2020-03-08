@@ -56,7 +56,7 @@ import { Component } from "@angular/core";
     `
 })
 
-export class ProductComponent {
+export class ProductComponent1 {
     public username: string = "vi";
     public choosetab;
     public courses: string[] = ["Angular", "Javascript", "Typescript", "Reactjs"];
